@@ -9,13 +9,41 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>rpc-server</module>
-        <module>rpc-client</module>
+        <module>rpc-provider</module>
+        <module>rpc-consumer</module>
         <module>rpc-filter</module>
         <module>rpc-codec</module>
         <module>rpc-transport</module>
         <module>rpc-console</module>
+        <module>rpc-registry</module>
+        <module>rpc-common</module>
     </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
+            <dependency>
+                <groupId>li.exercise</groupId>
+                <artifactId>rpc-common</artifactId>
+                <version>1.0-SNAPSHOT</version>
+            </dependency>
+            <dependency>
+                <groupId>redis.clients</groupId>
+                <artifactId>jedis</artifactId>
+                <version>2.10.1</version>
+            </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13</version>
+                <scope>test</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
 
 </project>
